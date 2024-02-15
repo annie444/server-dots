@@ -5,7 +5,7 @@ export PWD="$(pwd)"
 cp -R "${PWD}/config/bat" ~/.config/bat
 cp -R "${PWD}/config/cheat" ~/.config/cheat
 cp -R "${PWD}/config/gh-changelog" ~/.config/gh-changelog
-cp -R "${PWD}/config/dh-dash" ~/.config/dh-dash
+cp -R "${PWD}/config/gh-dash" ~/.config/gh-dash
 cp -R "${PWD}/config/lazygit" ~/.config/lazygit
 cp -R "${PWD}/config/starship.toml" ~/.config/starship.toml
 
