@@ -2,6 +2,12 @@
 
 export PWD="$(pwd)"
 
+wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz -O - | tar xz
+cp -R "${PWD}/nvim-linux64/*" ~/.local/
+
+echo "export PATH=$HOME/.local/bin:$PATH" >> .bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> .zshrc
+
 cp -R "${PWD}/config/bat" ~/.config/bat
 cp -R "${PWD}/config/cheat" ~/.config/cheat
 cp -R "${PWD}/config/gh-changelog" ~/.config/gh-changelog
