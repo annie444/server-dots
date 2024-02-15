@@ -1,0 +1,13 @@
+
+ldapsearch -x -h slapd.ipac.caltech.edu -b "ou=People,o=ipac,dc=caltech,dc=edu" "(&(nsrole=cn=ncm,o=ipac,dc=caltech,dc=edu)(uid=ncmae))"
+-x # Simple authentication (rather than SASL)
+-h <domain-name> # LDAP server
+-b <ldap-base> # LDAP search base
+<query> # RFC4515 query string
+
+# RF4515
+- (&(object)(obejct)) # AND
+- (|(object)(object)) # OR
+- (!object) # NOT
+
+More Information: https://confluence.ipac.caltech.edu/display/IRSA/LDAP+CLI+Cheat+Sheet
