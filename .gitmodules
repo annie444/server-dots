@@ -4,3 +4,6 @@
 [submodule "config/cheat/cheatsheets/personal"]
 	path = config/cheat/cheatsheets/personal
 	url = https://github.com/annie444/cheatsheets.git
+[submodule "config/nvim"]
+	path = config/nvim
+	url = https://github.com/annie444/nvim-dots.git
