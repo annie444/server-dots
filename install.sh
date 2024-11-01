@@ -22,6 +22,7 @@ cp -r "${PWD}/config/starship.toml" ~/.config/starship.toml
 cp -r "${PWD}/config/nvim" ~/.config/nvim
 cp -r "${PWD}/config/tmux" ~/.config/tmux
 mkdir -p ~/.tmux
+cp -r ${PWD}/config/tmux/* ~/.tmux/
 
 ./generate_tmux.sh
 ./generate_options.sh
