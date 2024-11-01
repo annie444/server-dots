@@ -4,8 +4,11 @@ export PWD="$(pwd)"
 
 git submodule update --init --recursive
 
-wget -q https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz -o - | tar xz
-cp -r "${PWD}/nvim-linux64/*" ~/.local/
+curl -fLSsO https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
+tar -xzf nvim-linux64.tar.gz
+cp -r ${PWD}/nvim-linux64/* ~/.local/
+rm nvim-linux64.tar.gz
+rm -rf ${PWD}/nvim-linux64
 
 echo "export PATH=$HOME/.local/bin:$PATH" >> .bashrc
 echo "export path=$HOME/.local/bin:$PATH" >> .zshrc

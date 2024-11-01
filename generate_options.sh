@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash --login
 
-conda create -n neovim -y python=3.12 pynvim
+source ~/.bashrc
+
+conda create -n neovim -y 'python==3.12' pynvim
 conda activate neovim
+conda install -y 'python==3.12' pynvim
 export PYTHON=$(which python)
 conda deactivate
 
