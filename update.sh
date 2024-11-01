@@ -16,3 +16,4 @@ cp -r "${PWD}/config/nvim" ~/.config/nvim
 cp -r "${PWD}/config/tmux" ~/.config/tmux
 
 ./generate_tmux.sh
+./generate_options.sh

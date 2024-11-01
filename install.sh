@@ -21,6 +21,7 @@ cp -r "${PWD}/config/tmux" ~/.config/tmux
 mkdir -p ~/.tmux
 
 ./generate_tmux.sh
+./generate_options.sh
 
 mkdir -p ~/.local/share/nvim/lazy
 git clone --filter=blob:none git@github.com:folke/lazy.nvim.git --branch=stable ~/.local/share/nvim/lazy/lazy.nvim
