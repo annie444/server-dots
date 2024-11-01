@@ -1,18 +1,18 @@
 #!/bin/bash
 
-export pwd="$(pwd)"
+export PWD="$(pwd)"
 
-cd "${pwd}/config/cheat/cheatsheets/personal"
+git checkout main
 git pull origin main
+git submodule update --init --recursive
 
-cd "${pwd}/config/cheat/cheatsheets/community"
-git pull origin master
+cp -r "${PWD}/config/bat" ~/.config/bat
+cp -r "${PWD}/config/cheat" ~/.config/cheat
+cp -r "${PWD}/config/gh-changelog" ~/.config/gh-changelog
+cp -r "${PWD}/config/gh-dash" ~/.config/gh-dash
+cp -r "${PWD}/config/lazygit" ~/.config/lazygit
+cp -r "${PWD}/config/starship.toml" ~/.config/starship.toml
+cp -r "${PWD}/config/nvim" ~/.config/nvim
+cp -r "${PWD}/config/tmux" ~/.config/tmux
 
-cd "${pwd}/config/nvim"
-git pull origin main
-
-rm -rf ~/.config/cheat
-cp -r "${pwd}/config/cheat" ~/.config/cheat
-
-rm -rf ~/.config/nvim
-cp -r "${pwd}/config/nvim" ~/.config/nvim
+./generate_tmux.sh
